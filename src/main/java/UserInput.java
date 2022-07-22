@@ -14,7 +14,7 @@ public class UserInput {
     //recieve data from api
     //display data
 
-    public void main (String[] args){
+    public static void main (String[] args){
         System.out.println("Hi there! Please enter the filename of the text file (.txt) that you wish to be processed. Please don't include the file type (.txt)");
         String filename = "";
         try {
@@ -34,13 +34,8 @@ public class UserInput {
             System.out.println(e.getMessage());
         }
 
-
-
-
-
-
     }
-    public String sanitiseInput(String filename) throws Exception{
+    public static String sanitiseInput(String filename) throws Exception{
 
         if(filename != ""){
             //remove potential file extension
@@ -57,7 +52,7 @@ public class UserInput {
 
         return filename;
     }
-    public String readFile(String filename) throws Exception{
+    public static String readFile(String filename) throws Exception{
 
         filename = filename + ".txt";
         String fileContent = "";
@@ -81,8 +76,6 @@ public class UserInput {
     }
 
     public void displayResults(Results results) throws Exception{
-        //recieve results and print to console pretty
-        //all over 0 - no 0 values or empty
         if(results.totalWords > 0 && results.averageLength > 0 && results.medianLength > 0 && !results.lengthFrequency.isEmpty()){
             System.out.println("Total words: " + results.totalWords);
             System.out.println("Average Word Length: " + results.averageLength);
@@ -98,8 +91,6 @@ public class UserInput {
         else{
             throw new Exception("Corruption of results");
         }
-
-
 
     }
 }
