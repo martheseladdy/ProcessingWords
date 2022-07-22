@@ -6,60 +6,89 @@ import java.util.*;
 import static org.junit.jupiter.api.Assertions.*;
 class UserInputTest {
     UserInput userFacing = new UserInput();
-    //if null filename throw error
+    String actual = "";
+    String expected = "";
     @org.junit.jupiter.api.Test
     void GivenUserInputForFilename_WhenFilenameIsEmpty_ThrowError() {
         Exception exception = assertThrows(RuntimeException.class, () -> { userFacing.sanitiseInput(""); });
 
-        String expected = "No filename provided";
-        String actual = exception.getMessage();
+        expected = "No filename provided";
+        actual = exception.getMessage();
 
         assertTrue(actual.contains(expected));
 
     }
     @org.junit.jupiter.api.Test
     void GivenUserInputForFilename_WhenFilenameIncludesSupportedFileType_ThenRemoveFileType() {
-        String actual = userFacing.sanitiseInput("text.txt");
-        String expected = "text";
+
+        expected = "text";
+
+        try{
+            actual = userFacing.sanitiseInput("text.txt");
+
+        }
+        catch(Exception e){
+            fail("Failed to sanitise input");
+        }
+        assertEquals(actual, expected);
+
+        try {
+            actual = userFacing.sanitiseInput("text.jpg");
+        }
+        catch(Exception e){
+            fail("Failed to sanitise input");
+        }
         assertEquals(actual, expected);
     }
     @org.junit.jupiter.api.Test
-    void GivenUserInputForFilename_WhenFilenameIncludesUnsupportedFileType_ThenThrowError() {
-        Exception exception = assertThrows(RuntimeException.class, () -> { userFacing.sanitiseInput("text.jpg"); });
+    void GivenUserInputForFilename_WhenFilenameIncludesUnsupportedFileType_ThenThrowError() { //remove and change to txt
+        actual = "";
+        try{
+            actual = userFacing.sanitiseInput("text.jpg");
+        }
+        catch(Exception e){
+            fail("Failed to sanitise input");
+        }
 
-        String expected = "Unsupported file type";
-        String actual = exception.getMessage();
-
-        assertTrue(actual.contains(expected));
+        expected = "text";
+        assertEquals(actual, expected);
     }
     @org.junit.jupiter.api.Test
     void GivenUserInputForFilename_WhenFilenameIncludesFormatIssues_ThenCastToStringType() {
-        String actual = userFacing.sanitiseInput("12-3/42.1");
-        String expected = String.valueOf("12-3/42.1");
+        actual = "";
+        try{
+            actual = userFacing.sanitiseInput("12-3/42.1");
+        }
+        catch(Exception e){
+            fail("Failed to sanitise input");
+        }
+
+        expected = String.valueOf("12-3/42");
 
         assertEquals(actual, expected);
     }
 
     @org.junit.jupiter.api.Test
-    void GivenUserInputForFilename_WhenFilenameDoesNotExist_ThenThrowError() {
-        Exception exception = assertThrows(RuntimeException.class, () -> { userFacing.sanitiseInput("ImFake"); });
+    void GivenSanitisedFilename_WhenFilenameDoesNotExist_ThenThrowError() {
+        Exception exception = assertThrows(RuntimeException.class, () -> { userFacing.readFile("ImFake"); });
 
-        String expected = "No file found";
-        String actual = exception.getMessage();
+        expected = "No file found";
+        actual = exception.getMessage();
 
         assertTrue(actual.contains(expected));
     }
 
     @org.junit.jupiter.api.Test
     void GivenSanitisedFilename_WhenFileHasExpectedContent_ThenReadFileContent() {
-        String actual = userFacing.readFile("text");
+        expected = "";
+        actual = "";
 
-        String expected = "";
         try {
+            actual = userFacing.readFile("text");
             expected = Files.readString(Paths.get("text.txt"));
         }
         catch (Exception e){
-            fail("Failed to read file in test class");
+            fail("Failed to read file");
         }
 
         assertEquals(actual, expected);
@@ -68,8 +97,8 @@ class UserInputTest {
     void GivenSanitisedFilename_WhenFileIsEmpty_ThenThrowError() {
         Exception exception = assertThrows(RuntimeException.class, () -> { userFacing.readFile("ImEmpty"); });
 
-        String expected = "File has no content";
-        String actual = exception.getMessage();
+        expected = "File has no content";
+        actual = exception.getMessage();
 
         assertTrue(actual.contains(expected));
     }
@@ -103,8 +132,8 @@ class UserInputTest {
 
         Exception exception = assertThrows(RuntimeException.class, () -> { userFacing.displayResults(results); });
 
-        String expected = "Corruption of results";
-        String actual = exception.getMessage();
+        expected = "Corruption of results";
+        actual = exception.getMessage();
 
         assertTrue(actual.contains(expected));
     }
