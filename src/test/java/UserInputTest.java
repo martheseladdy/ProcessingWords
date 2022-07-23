@@ -1,4 +1,6 @@
 
+import org.junit.jupiter.api.BeforeEach;
+
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -9,6 +11,7 @@ class UserInputTest {
     UserInput userFacing = new UserInput();
     String actual = "";
     String expected = "";
+
     @org.junit.jupiter.api.Test
     void GivenUserInputForFilename_WhenFilenameIsEmpty_ThrowError() {
         Exception exception = assertThrows(Exception.class, () -> { userFacing.sanitiseInput(""); });

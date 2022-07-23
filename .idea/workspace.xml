@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="80aeb7a0-1087-4f32-ac2b-e4ad43df9960" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ProcessingAPI.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/WordProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/WordProcessorTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Results.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInput.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserInputTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>

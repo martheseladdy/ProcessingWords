@@ -79,16 +79,17 @@ public class UserInput {
     }
 
     public static void displayResults(Results results) throws Exception{
-        if(results.totalWords > 0 && results.averageLength > 0 && results.medianLength > 0 && !results.lengthFrequency.isEmpty()){
-            System.out.println("Total words: " + results.totalWords);
-            System.out.println("Average Word Length: " + results.averageLength);
-            System.out.println("Most Common Word Length: " + results.medianLength);
+        if(results.getTotalWords() > 0 && results.getAverageLength() > 0 && results.getModeLength() > 0 && !results.getLengthFrequency().isEmpty()){
+            System.out.println("Total words: " + results.getTotalWords());
+            System.out.println("Average Word Length: " + results.getAverageLength());
+            System.out.println("Most Common Word Length: " + results.getModeLength());
 
-            Enumeration<Integer> enumerateFrequencies = results.lengthFrequency.keys();
+            Hashtable<Integer, Integer> lengthFrequencies = results.getLengthFrequency();
+            Enumeration<Integer> allKeys = results.getLengthFrequency().keys();
 
-            while(enumerateFrequencies.hasMoreElements()){
-                int key = enumerateFrequencies.nextElement();
-                System.out.println("Words of length " + results.lengthFrequency.get(key) + " : " + String.valueOf(key) + "/n");
+            while(allKeys.hasMoreElements()){
+                int key = allKeys.nextElement();
+                System.out.println("Words of length " + lengthFrequencies.get(key) + " : " + String.valueOf(key));
             }
         }
         else{
