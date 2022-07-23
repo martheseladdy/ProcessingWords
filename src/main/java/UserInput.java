@@ -23,15 +23,11 @@ public class UserInput {
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
             filename = reader.readLine();
-        }
-        catch(Exception e){
-            System.out.println("Sorry, something went wrong!");
-        }
-
-        try{
             filename = sanitiseInput(filename);
             String content = readFile(filename);
-            //ask api to process the content
+            ProcessingAPI processingAPI = new ProcessingAPI();
+            Results results = processingAPI.processingRequest(content);
+            displayResults(results);
         }
         catch(Exception e){
             System.out.println(e.getMessage());
@@ -82,7 +78,7 @@ public class UserInput {
         return fileContent;
     }
 
-    public void displayResults(Results results) throws Exception{
+    public static void displayResults(Results results) throws Exception{
         if(results.totalWords > 0 && results.averageLength > 0 && results.medianLength > 0 && !results.lengthFrequency.isEmpty()){
             System.out.println("Total words: " + results.totalWords);
             System.out.println("Average Word Length: " + results.averageLength);
