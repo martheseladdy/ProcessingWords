@@ -1,5 +1,6 @@
 
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 
@@ -10,7 +11,7 @@ class UserInputTest {
     String expected = "";
     @org.junit.jupiter.api.Test
     void GivenUserInputForFilename_WhenFilenameIsEmpty_ThrowError() {
-        Exception exception = assertThrows(RuntimeException.class, () -> { userFacing.sanitiseInput(""); });
+        Exception exception = assertThrows(Exception.class, () -> { userFacing.sanitiseInput(""); });
 
         expected = "No filename provided";
         actual = exception.getMessage();
@@ -70,7 +71,7 @@ class UserInputTest {
 
     @org.junit.jupiter.api.Test
     void GivenSanitisedFilename_WhenFilenameDoesNotExist_ThenThrowError() {
-        Exception exception = assertThrows(RuntimeException.class, () -> { userFacing.readFile("ImFake"); });
+        Exception exception = assertThrows(Exception.class, () -> { userFacing.readFile("ImFake"); });
 
         expected = "No file found";
         actual = exception.getMessage();
@@ -80,22 +81,21 @@ class UserInputTest {
 
     @org.junit.jupiter.api.Test
     void GivenSanitisedFilename_WhenFileHasExpectedContent_ThenReadFileContent() {
-        expected = "";
-        actual = "";
 
         try {
-            actual = userFacing.readFile("text");
-            expected = Files.readString(Paths.get("text.txt"));
+            actual = userFacing.readFile("test");
+            String directoryPath = System.getProperty("user.dir");
+            expected = Files.readString(Paths.get(directoryPath + "/src/resources/test.txt"));
         }
         catch (Exception e){
-            fail("Failed to read file");
+            fail("Failed to read file 2");
         }
 
         assertEquals(actual, expected);
     }
     @org.junit.jupiter.api.Test
     void GivenSanitisedFilename_WhenFileIsEmpty_ThenThrowError() {
-        Exception exception = assertThrows(RuntimeException.class, () -> { userFacing.readFile("ImEmpty"); });
+        Exception exception = assertThrows(Exception.class, () -> { userFacing.readFile("ImEmpty"); });
 
         expected = "File has no content";
         actual = exception.getMessage();
@@ -130,7 +130,7 @@ class UserInputTest {
 
         Results results = new Results(-52,-1,-10,emptyFrequencies);
 
-        Exception exception = assertThrows(RuntimeException.class, () -> { userFacing.displayResults(results); });
+        Exception exception = assertThrows(Exception.class, () -> { userFacing.displayResults(results); });
 
         expected = "Corruption of results";
         actual = exception.getMessage();
