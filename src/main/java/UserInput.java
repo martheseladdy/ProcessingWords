@@ -3,6 +3,9 @@ import java.io.File;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
+import java.nio.*;
+import java.nio.file.Path;
+import java.nio.file.*;
 
 
 public class UserInput {
@@ -38,12 +41,17 @@ public class UserInput {
     public static String sanitiseInput(String filename) throws Exception{
 
         if(filename != ""){
+
             //remove potential file extension
             if (filename.contains(".")){
-                String[] characters = filename.split(".");
+
+                String[] characters = filename.split("\\.");
+
                 filename = characters[0];
+
             }
             filename = String.valueOf(filename);
+
 
         }
         else{
@@ -57,16 +65,15 @@ public class UserInput {
         filename = filename + ".txt";
         String fileContent = "";
 
-        if(new File(filename).isFile()) {
+        String directoryPath = System.getProperty("user.dir");
+        Path filepath = Paths.get(directoryPath + "/src/resources/" + filename);
+        boolean exists = Files.exists(filepath);
 
 
-            try {
-                fileContent = Files.readString(Paths.get(filename));
-                if(fileContent.length() == 0){
-                    throw new Exception("File has no content");
-                }
-            } catch (Exception e) {
-                System.out.println("Failed to read file.");
+        if(exists) {
+            fileContent = Files.readString(filepath);
+            if(fileContent.length() == 0){
+                throw new Exception("File has no content");
             }
         }
         else{
