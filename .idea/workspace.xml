@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="80aeb7a0-1087-4f32-ac2b-e4ad43df9960" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/UserInput.class" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInput.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/UserInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserInputTest.java" afterDir="false" />
     </list>
@@ -101,5 +102,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ProcessingWords$UserInputTest.ic" NAME="UserInputTest Coverage Results" MODIFIED="1658501235029" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
