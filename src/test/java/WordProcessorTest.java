@@ -4,19 +4,19 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 class WordProcessorTest {
 
     WordProcessor processor = new WordProcessor();
 
-    String fileContent;
-    String oneWord;
-    String veryLong;
-    String numbered;
-    String specialChar;
-    String whiteSpaceChunks;
-    String whiteSpaceOnly;
+    static String fileContent;
+    static String oneWord;
+    static String veryLong;
+    static String numbered;
+    static String specialChar;
+    static String whiteSpaceChunks;
+    static String whiteSpaceOnly;
     Results results;
     int expected = 0;
     int actual = 0;
@@ -25,7 +25,7 @@ class WordProcessorTest {
 
 
     @BeforeAll
-    public void setUp() {
+    public static void setUp() {
         fileContent = "This is a normal happy easy going file, enjoy calculating me. There will be some sentences. Bye";
         oneWord = "Shenanigans";
         numbered = "12 and 789 and maybe 12.065 and then perhaps 12351 146 2587 5";
@@ -35,7 +35,7 @@ class WordProcessorTest {
 
         try
         {
-            veryLong = Files.readString(Paths.get(System.getProperty("user.dir") + "/src/resources/test.txt"));
+            veryLong = Files.readString(Paths.get(System.getProperty("user.dir") + "/src/resources/VeryLong.txt"));
         }
         catch(Exception e){
             System.out.println("Error in reading file content from file VeryLong.txt");
@@ -49,16 +49,16 @@ class WordProcessorTest {
         results = processor.compute(fileContent);
 
         actual = results.getTotalWords();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 17;
+        assertEquals(expected, actual);
 
         actual = results.getAverageLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 4;
+        assertEquals(expected, actual);
 
         actual = results.getModeLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 4;
+        assertEquals(expected, actual);
 
         actualFrequencies = results.getLengthFrequency();
         Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>() {
@@ -67,13 +67,13 @@ class WordProcessorTest {
                 put(2, 3);
                 put(3, 1);
                 put(4, 5);
-                put(5, 5);
+                put(5, 4);
                 put(6, 1);
                 put(9, 1);
                 put(11, 1);
             }};
 
-        assertEquals(actualFrequencies, expectedFrequencies);
+        assertEquals(expectedFrequencies, actualFrequencies);
 
     }
     @org.junit.jupiter.api.Test
@@ -81,16 +81,16 @@ class WordProcessorTest {
         results = processor.compute(oneWord);
 
         actual = results.getTotalWords();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 1;
+        assertEquals(expected, actual);
 
         actual = results.getAverageLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 11;
+        assertEquals(expected, actual);
 
         actual = results.getModeLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 11;
+        assertEquals(expected, actual);
 
         actualFrequencies = results.getLengthFrequency();
         Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>() {
@@ -98,7 +98,7 @@ class WordProcessorTest {
                 put(11, 1);
             }};
 
-        assertEquals(actualFrequencies, expectedFrequencies);
+        assertEquals(expectedFrequencies, actualFrequencies);
     }
 
     @org.junit.jupiter.api.Test
@@ -106,23 +106,23 @@ class WordProcessorTest {
         results = processor.compute(veryLong);
 
         actual = results.getTotalWords();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 2726;
+        assertEquals(expected, actual);
 
         actual = results.getAverageLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 5 ;
+        assertEquals(expected, actual);
 
         actual = results.getModeLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 5;
+        assertEquals(expected, actual);
 
 
         actualFrequencies = results.getLengthFrequency();
         expected = 1;
-        assertEquals(actualFrequencies.get(1), expected);
+        assertEquals(expected, actualFrequencies.get(1));
         expected = 1;
-        assertEquals(actualFrequencies.get(2), expected);
+        assertEquals(expected, actualFrequencies.get(2));
     }
 
     @org.junit.jupiter.api.Test
@@ -130,16 +130,16 @@ class WordProcessorTest {
         results = processor.compute(numbered);
 
         actual = results.getTotalWords();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 13;
+        assertEquals(expected, actual);
 
         actual = results.getAverageLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 3;
+        assertEquals(expected, actual);
 
         actual = results.getModeLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 3;
+        assertEquals(expected, actual);
 
         actualFrequencies = results.getLengthFrequency();
         Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>() {
@@ -149,10 +149,11 @@ class WordProcessorTest {
                 put(3, 5);
                 put(4, 2);
                 put(5, 2);
-                put(6, 2);
+                put(6, 1);
+                put(7, 1);
             }};
 
-        assertEquals(actualFrequencies, expectedFrequencies);
+        assertEquals(expectedFrequencies, actualFrequencies);
 
     }
 
@@ -161,16 +162,16 @@ class WordProcessorTest {
         results = processor.compute(specialChar);
 
         actual = results.getTotalWords();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 9;
+        assertEquals(expected, actual);
 
         actual = results.getAverageLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 5;
+        assertEquals(expected, actual);
 
         actual = results.getModeLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 3;
+        assertEquals(expected, actual);
 
         actualFrequencies = results.getLengthFrequency();
         Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>() {
@@ -178,11 +179,10 @@ class WordProcessorTest {
                 put(3, 4);
                 put(4, 1);
                 put(5, 1);
-                put(8, 2);
-                put(9, 1);
+                put(8, 3);
             }};
 
-        assertEquals(actualFrequencies, expectedFrequencies);
+        assertEquals(expectedFrequencies, actualFrequencies);
     }
 
     @org.junit.jupiter.api.Test
@@ -190,16 +190,16 @@ class WordProcessorTest {
         results = processor.compute(whiteSpaceChunks);
 
         actual = results.getTotalWords();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 9;
+        assertEquals(expected, actual);
 
         actual = results.getAverageLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 4;
+        assertEquals(expected, actual);
 
         actual = results.getModeLength();
-        expected = 0;
-        assertEquals(actual, expected);
+        expected = 3;
+        assertEquals(expected, actual);
 
         actualFrequencies = results.getLengthFrequency();
         Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>() {
@@ -210,7 +210,7 @@ class WordProcessorTest {
                 put(10, 1);
             }};
 
-        assertEquals(actualFrequencies, expectedFrequencies);
+        assertEquals(expectedFrequencies, actualFrequencies);
     }
 
     @org.junit.jupiter.api.Test
@@ -219,20 +219,20 @@ class WordProcessorTest {
 
         actual = results.getTotalWords();
         expected = 0;
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
 
         actual = results.getAverageLength();
         expected = 0;
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
 
         actual = results.getModeLength();
         expected = 0;
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
 
         actualFrequencies = results.getLengthFrequency();
         Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>();
 
-        assertEquals(actualFrequencies, expectedFrequencies);
+        assertEquals(expectedFrequencies, actualFrequencies);
     }
 
 }

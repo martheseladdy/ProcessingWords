@@ -34,7 +34,7 @@ class UserInputTest {
         catch(Exception e){
             fail("Failed to sanitise input");
         }
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
 
         try {
             actual = userFacing.sanitiseInput("text.jpg");
@@ -42,7 +42,7 @@ class UserInputTest {
         catch(Exception e){
             fail("Failed to sanitise input");
         }
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
     @org.junit.jupiter.api.Test
     void GivenUserInputForFilename_WhenFilenameIncludesUnsupportedFileType_ThenThrowError() { //remove and change to txt
@@ -55,7 +55,7 @@ class UserInputTest {
         }
 
         expected = "text";
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
     @org.junit.jupiter.api.Test
     void GivenUserInputForFilename_WhenFilenameIncludesFormatIssues_ThenCastToStringType() {
@@ -69,7 +69,7 @@ class UserInputTest {
 
         expected = String.valueOf("12-3/42");
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
 
     @org.junit.jupiter.api.Test
@@ -94,7 +94,7 @@ class UserInputTest {
             fail("Failed to read file 2");
         }
 
-        assertEquals(actual, expected);
+        assertEquals(expected, actual);
     }
     @org.junit.jupiter.api.Test
     void GivenSanitisedFilename_WhenFileIsEmpty_ThenThrowError() {

@@ -6,7 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="80aeb7a0-1087-4f32-ac2b-e4ad43df9960" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/test.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/test.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/WordProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WordProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/VeryLong.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/VeryLong.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UserInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserInputTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/WordProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WordProcessorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,30 +56,35 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserInputTest">
+  <component name="RunManager" selected="JUnit.WordProcessorTest">
     <configuration name="UserInputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ProcessingWords" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="UserInputTest" />
+      <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserInputTest.displayResults" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WordProcessorTest" type="JUnit" factoryName="JUnit">
       <module name="ProcessingWords" />
       <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="UserInputTest" />
-      <option name="METHOD_NAME" value="displayResults" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="WordProcessorTest" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="JUnit.WordProcessorTest" />
+      <item itemvalue="JUnit.UserInputTest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.UserInputTest" />
-        <item itemvalue="JUnit.UserInputTest.displayResults" />
+        <item itemvalue="JUnit.WordProcessorTest" />
       </list>
     </recent_temporary>
   </component>
