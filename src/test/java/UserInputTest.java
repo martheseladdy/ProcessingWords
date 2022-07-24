@@ -78,9 +78,9 @@ class UserInputTest {
     void GivenSanitisedFilename_WhenFileHasExpectedContent_ThenReadFileContent() {
 
         try {
-            actual = userFacing.readFile("test");
+            actual = userFacing.readFile("text");
             String directoryPath = System.getProperty("user.dir");
-            expected = Files.readString(Paths.get(directoryPath + "/src/resources/test.txt"));
+            expected = Files.readString(Paths.get(directoryPath + "/src/resources/text.txt"));
         }
         catch (Exception e){
             fail("Failed to read file 2");
