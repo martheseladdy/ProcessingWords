@@ -1,6 +1,7 @@
 import java.util.*;
 
 public class Results {
+    //data type to store results from processing
 
     private int totalWords = 0;
     private int modeLength = 0;

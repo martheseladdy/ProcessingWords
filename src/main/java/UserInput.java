@@ -7,6 +7,8 @@ import java.nio.file.Path;
 public class UserInput {
 
     public static void main (String[] args){
+        //Takes user input filename
+
         String filename = "";
 
         System.out.println("Hi there! Please enter the filename of the text file (.txt) that you wish to be processed. Please don't include the file type (.txt)");
@@ -26,6 +28,7 @@ public class UserInput {
     }
 
     public static String sanitiseInput(String filename) throws Exception{
+        //sanitiser user input filename
 
         if(filename != ""){
             //remove potential file extension
@@ -45,6 +48,8 @@ public class UserInput {
     }
 
     public static String readFile(String filename) throws Exception{
+        //read file contents to string variable
+
         filename = filename + ".txt";
         String fileContent = "";
         String directoryPath = System.getProperty("user.dir");
@@ -64,6 +69,7 @@ public class UserInput {
     }
 
     public static void displayResults(Results results) throws Exception{
+        //visibly show calculated results
 
         if(results.getTotalWords() > 0 && results.getAverageLength() > 0 && results.getModeLength() > 0 && !results.getLengthFrequency().isEmpty()){
             System.out.println("Total words: " + results.getTotalWords());

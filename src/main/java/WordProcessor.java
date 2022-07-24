@@ -3,6 +3,7 @@ import java.lang.*;
 public class WordProcessor {
 
     public Results compute(String fileContent){
+        //read through file content and produce results
 
         int total = 0;
         int mode = 0;
@@ -54,6 +55,7 @@ public class WordProcessor {
     }
 
     public int findMode(Hashtable<Integer, Integer> frequencies){
+        //iterate through dictionary to find the most common word length
 
         int highestFrequency = 0;
         int wordLength = 0;

@@ -10,8 +10,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Results.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WordProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WordProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/UserInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserInputTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WordProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WordProcessorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
