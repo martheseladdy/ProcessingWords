@@ -1,15 +1,12 @@
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
 
 import static org.junit.jupiter.api.Assertions.*;
-
 class WordProcessorTest {
 
     WordProcessor processor = new WordProcessor();
-
     static String fileContent;
     static String oneWord;
     static String veryLong;
@@ -20,12 +17,11 @@ class WordProcessorTest {
     Results results;
     int expected = 0;
     int actual = 0;
-
     Hashtable<Integer,Integer> actualFrequencies;
-
 
     @BeforeAll
     public static void setUp() {
+
         fileContent = "This is a normal happy easy going file, enjoy calculating me. There will be some sentences. Bye";
         oneWord = "Shenanigans";
         numbered = "12 and 789 and maybe 12.065 and then perhaps 12351 146 2587 5";
@@ -43,9 +39,9 @@ class WordProcessorTest {
 
     }
 
-
     @org.junit.jupiter.api.Test
     void GivenStringFileContent_WhenExpectedContent_ThenCalculateResults() {
+
         results = processor.compute(fileContent);
 
         actual = results.getTotalWords();
@@ -74,10 +70,10 @@ class WordProcessorTest {
             }};
 
         assertEquals(expectedFrequencies, actualFrequencies);
-
     }
     @org.junit.jupiter.api.Test
     void GivenStringFileContent_WhenOneWordContent_ThenCalculateResults() {
+
         results = processor.compute(oneWord);
 
         actual = results.getTotalWords();
@@ -93,6 +89,7 @@ class WordProcessorTest {
         assertEquals(expected, actual);
 
         actualFrequencies = results.getLengthFrequency();
+
         Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>() {
             {
                 put(11, 1);
@@ -103,6 +100,7 @@ class WordProcessorTest {
 
     @org.junit.jupiter.api.Test
     void GivenStringFileContent_WhenVeryLongContent_ThenCalculateResults() {
+
         results = processor.compute(veryLong);
 
         actual = results.getTotalWords();
@@ -119,14 +117,17 @@ class WordProcessorTest {
 
 
         actualFrequencies = results.getLengthFrequency();
+
         expected = 1;
         assertEquals(expected, actualFrequencies.get(1));
+
         expected = 1;
         assertEquals(expected, actualFrequencies.get(2));
     }
 
     @org.junit.jupiter.api.Test
     void GivenStringFileContent_WhenNumberedContent_ThenCalculateResults() {
+
         results = processor.compute(numbered);
 
         actual = results.getTotalWords();
@@ -142,6 +143,7 @@ class WordProcessorTest {
         assertEquals(expected, actual);
 
         actualFrequencies = results.getLengthFrequency();
+
         Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>() {
             {
                 put(1, 1);
@@ -154,11 +156,11 @@ class WordProcessorTest {
             }};
 
         assertEquals(expectedFrequencies, actualFrequencies);
-
     }
 
     @org.junit.jupiter.api.Test
     void GivenStringFileContent_WhenSpecialCharactersContent_ThenCalculateResults() {
+
         results = processor.compute(specialChar);
 
         actual = results.getTotalWords();
@@ -174,6 +176,7 @@ class WordProcessorTest {
         assertEquals(expected, actual);
 
         actualFrequencies = results.getLengthFrequency();
+
         Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>() {
             {
                 put(3, 4);
@@ -187,6 +190,7 @@ class WordProcessorTest {
 
     @org.junit.jupiter.api.Test
     void GivenStringFileContent_WhenWhiteSpaceChunks_ThenCalculateResults() {
+
         results = processor.compute(whiteSpaceChunks);
 
         actual = results.getTotalWords();
@@ -202,6 +206,7 @@ class WordProcessorTest {
         assertEquals(expected, actual);
 
         actualFrequencies = results.getLengthFrequency();
+
         Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>() {
             {
                 put(3, 6);
@@ -215,6 +220,7 @@ class WordProcessorTest {
 
     @org.junit.jupiter.api.Test
     void GivenStringFileContent_WhenWhiteSpaceOnlyContent_ThenCalculateResults() {
+
         results = processor.compute(whiteSpaceOnly);
 
         actual = results.getTotalWords();
