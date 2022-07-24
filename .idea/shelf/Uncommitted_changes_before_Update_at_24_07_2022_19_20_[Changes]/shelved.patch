@@ -1,0 +1,150 @@
+Index: .idea/artifacts/ProcessingWords_jar.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/artifacts/ProcessingWords_jar.xml b/.idea/artifacts/ProcessingWords_jar.xml
+new file mode 100644
+--- /dev/null	(date 1658686609373)
++++ b/.idea/artifacts/ProcessingWords_jar.xml	(date 1658686609373)
+@@ -0,0 +1,17 @@
++<component name="ArtifactManager">
++  <artifact type="jar" name="ProcessingWords:jar">
++    <output-path>$PROJECT_DIR$/out/artifacts/ProcessingWords_jar</output-path>
++    <root id="archive" name="ProcessingWords.jar">
++      <element id="module-output" name="ProcessingWords" />
++      <element id="module-test-output" name="ProcessingWords" />
++      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-engine/5.9.0-RC1/junit-jupiter-engine-5.9.0-RC1.jar" path-in-jar="/" />
++      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter/5.9.0-RC1/junit-jupiter-5.9.0-RC1.jar" path-in-jar="/" />
++      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-api/5.9.0-RC1/junit-jupiter-api-5.9.0-RC1.jar" path-in-jar="/" />
++      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/junit/jupiter/junit-jupiter-params/5.9.0-RC1/junit-jupiter-params-5.9.0-RC1.jar" path-in-jar="/" />
++      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-engine/1.9.0-RC1/junit-platform-engine-1.9.0-RC1.jar" path-in-jar="/" />
++      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar" path-in-jar="/" />
++      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/junit/platform/junit-platform-commons/1.9.0-RC1/junit-platform-commons-1.9.0-RC1.jar" path-in-jar="/" />
++      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar" path-in-jar="/" />
++    </root>
++  </artifact>
++</component>
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"AutoImportSettings\">\r\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"80aeb7a0-1087-4f32-ac2b-e4ad43df9960\" name=\"Changes\" comment=\"\">\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/ProcessingAPI.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/ProcessingAPI.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/Results.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/Results.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/UserInput.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/UserInput.java\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/src/main/java/WordProcessor.java\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/main/java/WordProcessor.java\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"Class\" />\r\n        <option value=\"JUnit5 Test Class\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"MarkdownSettingsMigration\">\r\n    <option name=\"stateVersion\" value=\"1\" />\r\n  </component>\r\n  <component name=\"ProjectId\" id=\"2CIK6OGFM7o26TfUpidFECucGre\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\" />\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\"><![CDATA[{\r\n  \"keyToString\": {\r\n    \"RunOnceActivity.OpenProjectViewOnStart\": \"true\",\r\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\r\n    \"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary\": \"JUnit5\",\r\n    \"com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5\": \"\",\r\n    \"project.structure.last.edited\": \"Modules\",\r\n    \"project.structure.proportion\": \"0.0\",\r\n    \"project.structure.side.proportion\": \"0.0\"\r\n  }\r\n}]]></component>\r\n  <component name=\"RecentsManager\">\r\n    <key name=\"CreateTestDialog.Recents.Supers\">\r\n      <recent name=\"\" />\r\n    </key>\r\n    <key name=\"CreateTestDialog.RecentsKey\">\r\n      <recent name=\"\" />\r\n    </key>\r\n  </component>\r\n  <component name=\"RunManager\" selected=\"JUnit.WordProcessorTest\">\r\n    <configuration name=\"UserInputTest\" type=\"JUnit\" factoryName=\"JUnit\" temporary=\"true\" nameIsGenerated=\"true\">\r\n      <module name=\"ProcessingWords\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"UserInputTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <configuration name=\"WordProcessorTest\" type=\"JUnit\" factoryName=\"JUnit\">\r\n      <module name=\"ProcessingWords\" />\r\n      <option name=\"PACKAGE_NAME\" value=\"\" />\r\n      <option name=\"MAIN_CLASS_NAME\" value=\"WordProcessorTest\" />\r\n      <option name=\"METHOD_NAME\" value=\"\" />\r\n      <option name=\"TEST_OBJECT\" value=\"class\" />\r\n      <method v=\"2\">\r\n        <option name=\"Make\" enabled=\"true\" />\r\n      </method>\r\n    </configuration>\r\n    <list>\r\n      <item itemvalue=\"JUnit.WordProcessorTest\" />\r\n      <item itemvalue=\"JUnit.UserInputTest\" />\r\n    </list>\r\n    <recent_temporary>\r\n      <list>\r\n        <item itemvalue=\"JUnit.UserInputTest\" />\r\n        <item itemvalue=\"JUnit.WordProcessorTest\" />\r\n      </list>\r\n    </recent_temporary>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"80aeb7a0-1087-4f32-ac2b-e4ad43df9960\" name=\"Changes\" comment=\"\" />\r\n      <created>1658484486225</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1658484486225</updated>\r\n    </task>\r\n    <servers />\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n  </component>\r\n  <component name=\"com.intellij.coverage.CoverageDataManagerImpl\">\r\n    <SUITE FILE_PATH=\"coverage/ProcessingWords$UserInputTest.ic\" NAME=\"UserInputTest Coverage Results\" MODIFIED=\"1658501235029\" SOURCE_PROVIDER=\"com.intellij.coverage.DefaultCoverageFileProvider\" RUNNER=\"idea\" COVERAGE_BY_TEST_ENABLED=\"false\" COVERAGE_TRACING_ENABLED=\"false\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 1b307c4c998fef92c5a54537bc05a169331f3ff2)
++++ b/.idea/workspace.xml	(date 1658686609378)
+@@ -5,11 +5,9 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="80aeb7a0-1087-4f32-ac2b-e4ad43df9960" name="Changes" comment="">
++      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/UserInput.xml" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/ProcessingAPI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ProcessingAPI.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Results.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInput.java" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/main/java/WordProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WordProcessor.java" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/test/java/UserInputTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UserInputTest.java" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -40,11 +38,14 @@
+   "keyToString": {
+     "RunOnceActivity.OpenProjectViewOnStart": "true",
+     "RunOnceActivity.ShowReadmeOnStart": "true",
++    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+-    "project.structure.last.edited": "Modules",
+-    "project.structure.proportion": "0.0",
+-    "project.structure.side.proportion": "0.0"
++    "last_opened_file_path": "C:/Users/Marthése Ladvier/IdeaProjects/ProcessingWords/ProcessingWords",
++    "project.structure.last.edited": "Artifacts",
++    "project.structure.proportion": "0.15",
++    "project.structure.side.proportion": "0.2",
++    "settings.editor.selected.configurable": "MavenSettings"
+   }
+ }]]></component>
+   <component name="RecentsManager">
+@@ -55,8 +56,8 @@
+       <recent name="" />
+     </key>
+   </component>
+-  <component name="RunManager" selected="JUnit.WordProcessorTest">
+-    <configuration name="UserInputTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
++  <component name="RunManager" selected="Application.UserInput">
++    <configuration name="UserInputTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
+       <module name="ProcessingWords" />
+       <option name="PACKAGE_NAME" value="" />
+       <option name="MAIN_CLASS_NAME" value="UserInputTest" />
+@@ -77,12 +78,12 @@
+       </method>
+     </configuration>
+     <list>
++      <item itemvalue="Application.UserInput" />
+       <item itemvalue="JUnit.WordProcessorTest" />
+       <item itemvalue="JUnit.UserInputTest" />
+     </list>
+     <recent_temporary>
+       <list>
+-        <item itemvalue="JUnit.UserInputTest" />
+         <item itemvalue="JUnit.WordProcessorTest" />
+       </list>
+     </recent_temporary>
+Index: .idea/runConfigurations/UserInput.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/runConfigurations/UserInput.xml b/.idea/runConfigurations/UserInput.xml
+new file mode 100644
+--- /dev/null	(date 1658684386680)
++++ b/.idea/runConfigurations/UserInput.xml	(date 1658684386680)
+@@ -0,0 +1,9 @@
++<component name="ProjectRunConfigurationManager">
++  <configuration default="false" name="UserInput" type="Application" factoryName="Application" nameIsGenerated="true">
++    <option name="MAIN_CLASS_NAME" value="UserInput" />
++    <module name="ProcessingWords" />
++    <method v="2">
++      <option name="Make" enabled="true" />
++    </method>
++  </configuration>
++</component>
+\ No newline at end of file
+Index: src/test/java/UserInputTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import java.nio.file.Files;\r\nimport java.nio.file.Paths;\r\nimport java.util.*;\r\nimport static org.junit.jupiter.api.Assertions.*;\r\n\r\nclass UserInputTest {\r\n\r\n    UserInput userFacing = new UserInput();\r\n    String actual = \"\";\r\n    String expected = \"\";\r\n\r\n    @org.junit.jupiter.api.Test\r\n    void GivenUserInputForFilename_WhenFilenameIsEmpty_ThrowError() {\r\n\r\n        Exception exception = assertThrows(Exception.class, () -> { userFacing.sanitiseInput(\"\"); });\r\n\r\n        expected = \"No filename provided\";\r\n        actual = exception.getMessage();\r\n        assertTrue(actual.contains(expected));\r\n    }\r\n    @org.junit.jupiter.api.Test\r\n    void GivenUserInputForFilename_WhenFilenameIncludesSupportedFileType_ThenRemoveFileType() {\r\n\r\n        expected = \"text\";\r\n        try{\r\n            actual = userFacing.sanitiseInput(\"text.txt\");\r\n\r\n        }\r\n        catch(Exception e){\r\n            fail(\"Failed to sanitise input\");\r\n        }\r\n        assertEquals(expected, actual);\r\n\r\n        try {\r\n            actual = userFacing.sanitiseInput(\"text.jpg\");\r\n        }\r\n        catch(Exception e){\r\n            fail(\"Failed to sanitise input\");\r\n        }\r\n        assertEquals(expected, actual);\r\n    }\r\n    @org.junit.jupiter.api.Test\r\n    void GivenUserInputForFilename_WhenFilenameIncludesUnsupportedFileType_ThenThrowError() {\r\n\r\n        try{\r\n            actual = userFacing.sanitiseInput(\"text.jpg\");\r\n        }\r\n        catch(Exception e){\r\n            fail(\"Failed to sanitise input\");\r\n        }\r\n        expected = \"text\";\r\n        assertEquals(expected, actual);\r\n    }\r\n    @org.junit.jupiter.api.Test\r\n    void GivenUserInputForFilename_WhenFilenameIncludesFormatIssues_ThenCastToStringType() {\r\n\r\n        expected = String.valueOf(\"12-3/42\");\r\n        try{\r\n            actual = userFacing.sanitiseInput(\"12-3/42.1\");\r\n        }\r\n        catch(Exception e){\r\n            fail(\"Failed to sanitise input\");\r\n        }\r\n        assertEquals(expected, actual);\r\n    }\r\n\r\n    @org.junit.jupiter.api.Test\r\n    void GivenSanitisedFilename_WhenFilenameDoesNotExist_ThenThrowError() {\r\n\r\n        Exception exception = assertThrows(Exception.class, () -> { userFacing.readFile(\"ImFake\"); });\r\n\r\n        expected = \"No file found\";\r\n        actual = exception.getMessage();\r\n        assertTrue(actual.contains(expected));\r\n    }\r\n\r\n    @org.junit.jupiter.api.Test\r\n    void GivenSanitisedFilename_WhenFileHasExpectedContent_ThenReadFileContent() {\r\n\r\n        try {\r\n            actual = userFacing.readFile(\"test\");\r\n            String directoryPath = System.getProperty(\"user.dir\");\r\n            expected = Files.readString(Paths.get(directoryPath + \"/src/resources/test.txt\"));\r\n        }\r\n        catch (Exception e){\r\n            fail(\"Failed to read file 2\");\r\n        }\r\n\r\n        assertEquals(expected, actual);\r\n    }\r\n    @org.junit.jupiter.api.Test\r\n    void GivenSanitisedFilename_WhenFileIsEmpty_ThenThrowError() {\r\n\r\n        Exception exception = assertThrows(Exception.class, () -> { userFacing.readFile(\"ImEmpty\"); });\r\n\r\n        expected = \"File has no content\";\r\n        actual = exception.getMessage();\r\n        assertTrue(actual.contains(expected));\r\n    }\r\n\r\n    @org.junit.jupiter.api.Test\r\n    void GivenSanitisedFilename_WhenFileIsVeryLong_ThenReadFileContent() {\r\n\r\n      assertDoesNotThrow(() -> userFacing.readFile(\"VeryLong\"));\r\n    }\r\n\r\n    @org.junit.jupiter.api.Test\r\n    void GivenSanitisedFilename_WhenFileIsOneWord_ThenReadFileContent() {\r\n\r\n        assertDoesNotThrow(() -> userFacing.readFile(\"JustOneWord\"));\r\n    }\r\n\r\n    @org.junit.jupiter.api.Test\r\n    void GivenProcessingResults_WhenExpectedDataTypes_ThenDisplayResults() {\r\n\r\n        Hashtable<Integer, Integer> frequencies = new Hashtable<Integer, Integer>();\r\n\r\n        frequencies.put(10, 5);\r\n\r\n        Results results = new Results(1,1,1,frequencies);\r\n\r\n        assertDoesNotThrow(() -> userFacing.displayResults(results));\r\n    }\r\n    @org.junit.jupiter.api.Test\r\n    void GivenProcessingResults_WhenUnexpectedValues_ThenThrowError() {\r\n\r\n        Hashtable<Integer, Integer> emptyFrequencies = new Hashtable<Integer, Integer>();\r\n\r\n        Results results = new Results(-52,-1,-10,emptyFrequencies);\r\n\r\n        Exception exception = assertThrows(Exception.class, () -> { userFacing.displayResults(results); });\r\n\r\n        expected = \"Corruption of results\";\r\n        actual = exception.getMessage();\r\n        assertTrue(actual.contains(expected));\r\n    }\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/UserInputTest.java b/src/test/java/UserInputTest.java
+--- a/src/test/java/UserInputTest.java	(revision 19b20ad2420387e34acd25d7cbad169542286820)
++++ b/src/test/java/UserInputTest.java	(date 1658683180217)
+@@ -78,9 +78,9 @@
+     void GivenSanitisedFilename_WhenFileHasExpectedContent_ThenReadFileContent() {
+ 
+         try {
+-            actual = userFacing.readFile("test");
++            actual = userFacing.readFile("text");
+             String directoryPath = System.getProperty("user.dir");
+-            expected = Files.readString(Paths.get(directoryPath + "/src/resources/test.txt"));
++            expected = Files.readString(Paths.get(directoryPath + "/src/resources/text.txt"));
+         }
+         catch (Exception e){
+             fail("Failed to read file 2");
+Index: src/main/java/META-INF/MANIFEST.MF
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/META-INF/MANIFEST.MF b/src/main/java/META-INF/MANIFEST.MF
+new file mode 100644
+--- /dev/null	(date 1658686592406)
++++ b/src/main/java/META-INF/MANIFEST.MF	(date 1658686592406)
+@@ -0,0 +1,3 @@
++Manifest-Version: 1.0
++Main-Class: UserInput
++
