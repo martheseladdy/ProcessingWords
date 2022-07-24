@@ -7,3 +7,5 @@ A word is defined as characters (incluidng numbers and special characters) of le
 Words ending in punctuation are the word without the final punctuation; for example "cat," would produce word "cat".
 
 Other assumptions are the files are of the .txt file type, and that decimal numbers will be rounded to whole numbers due to context (i.e. words cannot be 3.5 characters long).
+
+.txt files are to be placed in the directory path from the parent: /ProcessingWords/src/main/resources
