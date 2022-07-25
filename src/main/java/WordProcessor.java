@@ -12,24 +12,15 @@ public class WordProcessor {
         int currentValue = 0;
         Hashtable<Integer, Integer> frequencies = new Hashtable<Integer, Integer>();
 
-        String[] content = fileContent.split(" ");
+        String[] content = fileContent.split(" |\\n");
+
+
 
         for (String word : content) {
-            if (!word.isBlank()) {
-                //don't include punctuation in word length
-                if (String.valueOf(word.charAt(word.length() - 1)).equals(".")
-                        || String.valueOf(word.charAt(word.length() - 1)).equals(",")
-                        || String.valueOf(word.charAt(word.length() - 1)).equals("?")
-                        || String.valueOf(word.charAt(word.length() - 1)).equals("!")
-                        || String.valueOf(word.charAt(word.length() - 1)).equals(":")
-                        || String.valueOf(word.charAt(word.length() - 1)).equals(";")
-                        || String.valueOf(word.charAt(word.length() - 1)).equals("-")) {
-                    length = word.length() - 1;
-                }
-                else {
-                    length = word.length();
-                }
 
+            if (!word.isBlank()) {
+                word = cleanWords(word);
+                length = word.length();
                 total = total + 1;
                 average = average + length;
 
@@ -44,7 +35,10 @@ public class WordProcessor {
         }
 
         if(average > 0){
-            average = average / total;
+            float av = average;
+            float t = total;
+            float avg = av/t;
+            average = Math.round(avg);
         }
 
         mode = findMode(frequencies);
@@ -70,6 +64,25 @@ public class WordProcessor {
             }
         }
         return wordLength;
+    }
+
+    public String cleanWords(String word){
+        String finalChar = String.valueOf(word.charAt(word.length() - 1));
+        if (finalChar.equals(".")
+                || finalChar.equals(",")
+                || finalChar.equals("?")
+                || finalChar.equals("!")
+                || finalChar.equals(":")
+                || finalChar.equals(";")
+                || finalChar.equals("-")) {
+            word = word.substring(0, word.length()-1);
+        }
+
+        word = word.replaceAll("\\r", "");
+        word = word.replaceAll("\\n", "");
+
+
+        return word;
     }
 
 }

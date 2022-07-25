@@ -54,7 +54,7 @@ public class UserInput {
         String fileContent = "";
         String directoryPath = System.getProperty("user.dir");
 
-        Path filepath = Paths.get(directoryPath + "/src/resources/" + filename);
+        Path filepath = Paths.get(directoryPath + "/" + filename);
         boolean exists = Files.exists(filepath);
         if(exists) {
             fileContent = Files.readString(filepath);
@@ -81,7 +81,7 @@ public class UserInput {
 
             while(allKeys.hasMoreElements()){
                 int key = allKeys.nextElement();
-                System.out.println("Words of length " + lengthFrequencies.get(key) + " : " + String.valueOf(key));
+                System.out.println("Words of length " + String.valueOf(key) + " : " + lengthFrequencies.get(key));
             }
         }
         else{
