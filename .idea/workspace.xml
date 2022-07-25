@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="80aeb7a0-1087-4f32-ac2b-e4ad43df9960" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessingWords-1.0-SNAPSHOT - Copy.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessingWords-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/ProcessingWords-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProcessingWords-1.0-SNAPSHOT.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/UserInput.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/UserInput.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/WordProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/WordProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/WordProcessorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/WordProcessorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +70,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WordProcessorTest">
+  <component name="RunManager" selected="JUnit.UserInputTest">
     <configuration name="UserInputTest" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="ProcessingWords" />
       <option name="PACKAGE_NAME" value="" />

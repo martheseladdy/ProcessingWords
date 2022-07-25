@@ -12,21 +12,15 @@ public class WordProcessor {
         int currentValue = 0;
         Hashtable<Integer, Integer> frequencies = new Hashtable<Integer, Integer>();
 
-        String[] content = fileContent.split(" ");
+        String[] content = fileContent.split(" |\\n");
+
 
 
         for (String word : content) {
 
             if (!word.isBlank()) {
                 word = cleanWords(word);
-                String finalChar = String.valueOf(word.charAt(word.length() - 1));
-                //don't include punctuation in word length
-
-
                 length = word.length();
-
-
-                System.out.println("word: " + word + " Length:" + length);
                 total = total + 1;
                 average = average + length;
 
