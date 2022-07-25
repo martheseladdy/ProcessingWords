@@ -54,7 +54,7 @@ public class UserInput {
         String fileContent = "";
         String directoryPath = System.getProperty("user.dir");
 
-        Path filepath = Paths.get(directoryPath + "/src/resources/" + filename);
+        Path filepath = Paths.get(directoryPath + filename);
         boolean exists = Files.exists(filepath);
         if(exists) {
             fileContent = Files.readString(filepath);

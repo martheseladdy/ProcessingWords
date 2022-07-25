@@ -14,6 +14,7 @@ class WordProcessorTest {
     static String specialChar;
     static String whiteSpaceChunks;
     static String whiteSpaceOnly;
+    static String whiteSpaceWithNewLines;
     Results results;
     int expected = 0;
     int actual = 0;
@@ -31,10 +32,11 @@ class WordProcessorTest {
 
         try
         {
-            veryLong = Files.readString(Paths.get(System.getProperty("user.dir") + "/src/resources/VeryLong.txt"));
+            veryLong = Files.readString(Paths.get(System.getProperty("user.dir") + "/VeryLong.txt"));
+            whiteSpaceWithNewLines = Files.readString(Paths.get(System.getProperty("user.dir") + "/newLines.txt"));
         }
         catch(Exception e){
-            System.out.println("Error in reading file content from file VeryLong.txt");
+            System.out.println("Error in reading file content from file");
         }
 
     }
@@ -135,7 +137,7 @@ class WordProcessorTest {
         assertEquals(expected, actual);
 
         actual = results.getAverageLength();
-        expected = 3;
+        expected = 4;
         assertEquals(expected, actual);
 
         actual = results.getModeLength();
@@ -237,6 +239,33 @@ class WordProcessorTest {
 
         actualFrequencies = results.getLengthFrequency();
         Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>();
+
+        assertEquals(expectedFrequencies, actualFrequencies);
+    }
+
+    @org.junit.jupiter.api.Test
+    void GivenStringFileContent_WhenWhiteSpaceAndNewLines_ThenCalculateResults() {
+
+        results = processor.compute(whiteSpaceWithNewLines);
+
+        actual = results.getTotalWords();
+        expected = 3;
+        assertEquals(expected, actual);
+
+        actual = results.getAverageLength();
+        expected = 4;
+        assertEquals(expected, actual);
+
+        actual = results.getModeLength();
+        expected = 6;
+        assertEquals(expected, actual);
+
+        actualFrequencies = results.getLengthFrequency();
+        Hashtable<Integer, Integer> expectedFrequencies = new Hashtable<Integer, Integer>(){{
+            put(1,1);
+            put(4,1);
+            put(6,1);
+        }};
 
         assertEquals(expectedFrequencies, actualFrequencies);
     }
